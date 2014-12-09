@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui webkitwidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -15,12 +15,15 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     intropage.cpp \
-    getpassword.cpp
+    getpassword.cpp \
+    ffunction.cpp
 
 HEADERS  += mainwindow.h \
     intropage.h \
-    getpassword.h
+    getpassword.h \
+    ffunction.h
 
 FORMS    += \
     IntroPage.ui \
-    Password.ui
+    Password.ui \
+    F_Function.ui

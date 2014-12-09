@@ -1,7 +1,6 @@
 #ifndef GETPASSWORD_H
 #define GETPASSWORD_H
 #include <QWizard>
-#include <QString>
 
 namespace Ui {
   class GetPassword;

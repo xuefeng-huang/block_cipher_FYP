@@ -14,6 +14,8 @@ GetPassword::GetPassword(QWidget *parent)
 
   connect(ui -> password, SIGNAL(textChanged(QString)),
             this, SLOT(check_length()));
+
+  registerField("password", ui -> password);
 }
 
 GetPassword::~GetPassword(){
