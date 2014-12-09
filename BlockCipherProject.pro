@@ -14,10 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    intropage.cpp
+    intropage.cpp \
+    getpassword.cpp
 
 HEADERS  += mainwindow.h \
-    intropage.h
+    intropage.h \
+    getpassword.h
 
 FORMS    += \
-    IntroPage.ui
+    IntroPage.ui \
+    Password.ui

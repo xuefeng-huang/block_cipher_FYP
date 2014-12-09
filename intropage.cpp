@@ -3,20 +3,21 @@
 #include <QFileDialog>
 
 IntroPage::IntroPage(QWidget *parent)
-     : QWizardPage(parent), ui(new Ui::IntroPage)
- {
-     ui -> setupUi(this);
+  : QWizardPage(parent), ui(new Ui::IntroPage)
+{
+  ui -> setupUi(this);
 
-     //setPixmap(QWizard::WatermarkPixmap, QPixmap(":/images/watermark1.png"));
+  //setPixmap(QWizard::WatermarkPixmap, QPixmap(":/images/watermark1.png"));
 
-     ui -> title -> setText("<h1>1. Intro</h1>");
-     ui -> description -> setText("Follow steps to customize DES parametres "
-                           "and generate a corresponding ciphertext. "
-                           "First, choose a file to encrypt ");
-     ui -> description -> setWordWrap(true);
+  ui -> title -> setText("<h1>1. Intro</h1>");
+  ui -> description -> setText("Follow steps to customize DES parametres "
+                               "and generate a corresponding ciphertext. "
+                               "First, choose a file to encrypt ");
+  ui -> description -> setWordWrap(true);
 
+  registerField("file_path*", ui -> file_path);
 
- }
+}
 
 IntroPage::~IntroPage(){
   delete ui;
