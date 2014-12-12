@@ -12,7 +12,7 @@ class IntroPage : public QWizardPage
   Q_OBJECT
 
 public:
-  IntroPage(QWidget *parent = 0);
+  explicit IntroPage(QWidget *parent = 0);
   ~IntroPage();
 
 private slots:

@@ -11,9 +11,9 @@ FFunction::FFunction(QWidget *parent)
 
   ui -> title -> setText("<h1>3. F function</h1>");
   ui -> description -> setText("F function is the most important part in "
-                               "DES, SBox provides confusion and Permutation "
-                               "box provides diffusion, choose the one you "
-                               "want to enable:");
+                               "DES, <b>SBox</b> provides confusion and "
+                               "<b>Permutation box</b> provides diffusion, "
+                               "choose the one you want to enable:");
   ui -> description -> setWordWrap(true);
 
   registerField("check_sbox", ui -> check_sbox);

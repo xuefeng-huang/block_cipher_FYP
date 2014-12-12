@@ -10,7 +10,7 @@ class GetPassword : public QWizardPage
 {
   Q_OBJECT
 public:
-  GetPassword(QWidget* parent = 0);
+  explicit GetPassword(QWidget* parent = 0);
   ~GetPassword();
   bool isComplete() const;
 

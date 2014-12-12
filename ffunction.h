@@ -10,7 +10,7 @@ class FFunction : public QWizardPage
 {
   Q_OBJECT
 public:
-  FFunction(QWidget* parent = 0);
+  explicit FFunction(QWidget* parent = 0);
   ~FFunction();
 
 private:

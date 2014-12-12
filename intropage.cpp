@@ -15,7 +15,7 @@ IntroPage::IntroPage(QWidget *parent)
                                "First, choose a file to encrypt ");
   ui -> description -> setWordWrap(true);
 
-  registerField("file_path*", ui -> file_path);
+  registerField("input_file_path*", ui -> file_path);
 
 }
 

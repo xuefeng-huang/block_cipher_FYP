@@ -16,14 +16,19 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     intropage.cpp \
     getpassword.cpp \
-    ffunction.cpp
+    ffunction.cpp \
+    savefile.cpp \
+    DES.cpp
 
 HEADERS  += mainwindow.h \
     intropage.h \
     getpassword.h \
-    ffunction.h
+    ffunction.h \
+    savefile.h \
+    DES.h
 
 FORMS    += \
     IntroPage.ui \
     Password.ui \
-    F_Function.ui
+    F_Function.ui \
+    savefile.ui
