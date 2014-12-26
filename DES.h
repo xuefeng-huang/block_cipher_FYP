@@ -3,6 +3,16 @@
 
 typedef char ElemType;
 
+//struct to store all component selection
+struct component_selection {
+  bool IP;
+  bool feistel_swap;
+  bool permutation_internal;
+  bool inverse_permutation;
+  int num_of_rounds;
+  int sbox[8];
+};
+
 
 int ByteToBit(ElemType ch,ElemType bit[8]);
 
@@ -28,18 +38,22 @@ int DES_E_Transform(ElemType data[48]);
 
 int DES_P_Transform(ElemType data[32]);
 
-int DES_SBOX(ElemType data[48]);
+int DES_SBOX(ElemType data[48], component_selection const* user_choice);
 
 int DES_XOR(ElemType R[48], ElemType L[48],int count);
 
 int DES_Swap(ElemType left[32],ElemType right[32]);
 
-int DES_EncryptBlock(ElemType plainBlock[8], ElemType subKeys[16][48], ElemType cipherBlock[8]);
+int DES_EncryptBlock(ElemType plainBlock[8], ElemType subKeys[16][48], ElemType cipherBlock[8],
+                    component_selection const* user_choice);
 
-int DES_DecryptBlock(ElemType cipherBlock[8], ElemType subKeys[16][48], ElemType plainBlock[8]);
+int DES_DecryptBlock(ElemType cipherBlock[8], ElemType subKeys[16][48], ElemType plainBlock[8],
+component_selection const* user_choice);
 
-int DES_Encrypt(const char *plainFile, const char *keyStr,const char *cipherFile);
+int DES_Encrypt(const char *plainFile, const char *keyStr,const char *cipherFile,
+                component_selection const* user_choice);
 
-int DES_Decrypt(const char *cipherFile, const char *keyStr, const char *plainFile);
+int DES_Decrypt(const char *cipherFile, const char *keyStr, const char *plainFile,
+                component_selection const* user_choice);
 
 #endif // DES_H

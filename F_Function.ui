@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>496</width>
-    <height>354</height>
+    <height>357</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -32,6 +32,9 @@
     <layout class="QHBoxLayout" name="horizontalLayout_10">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="bottomMargin">
+        <number>30</number>
+       </property>
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
@@ -54,13 +57,19 @@
        </item>
        <item>
         <widget class="QCheckBox" name="check_swap">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;check to enable Feistel network construction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
-          <string>Fiestle swap</string>
+          <string>Feistel swap</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QCheckBox" name="check_permutarion">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;check to enable Permutation after every substitution&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Permutation after substitutiion</string>
          </property>
@@ -76,7 +85,11 @@
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_9">
          <item>
-          <widget class="QComboBox" name="num_rounds"/>
+          <widget class="QComboBox" name="num_rounds">
+           <property name="toolTip">
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;select how many Feistel network swap&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="label">

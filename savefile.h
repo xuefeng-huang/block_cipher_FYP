@@ -2,6 +2,7 @@
 #define SAVEFILE_H
 
 #include <QWizardPage>
+#include "DES.h"
 
 namespace Ui {
   class SaveFile;
@@ -17,9 +18,12 @@ public:
 
 private slots:
   void save_file();
+  void save_decrypt_file();
+  void decrypt();
 
 private:
   Ui::SaveFile *ui;
+  void get_selection(component_selection* user_choice);
 };
 
 #endif // SAVEFILE_H

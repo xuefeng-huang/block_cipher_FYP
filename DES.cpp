@@ -11,7 +11,7 @@
 #define OK 1;
 
 
-       /* IP table */
+/* IP table */
 
 int IP_Table[64] = { 57,49,41,33,25,17,9,1,
 
@@ -52,30 +52,30 @@ int IP_1_Table[64] = {39,7,47,15,55,23,63,31,
 
 int E_Table[48] = {31, 0, 1, 2, 3, 4,
 
-                  3, 4, 5, 6, 7, 8,
+                   3, 4, 5, 6, 7, 8,
 
-                  7, 8,9,10,11,12,
+                   7, 8,9,10,11,12,
 
-                  11,12,13,14,15,16,
+                   11,12,13,14,15,16,
 
-                  15,16,17,18,19,20,
+                   15,16,17,18,19,20,
 
-                  19,20,21,22,23,24,
+                   19,20,21,22,23,24,
 
-                  23,24,25,26,27,28,
+                   23,24,25,26,27,28,
 
-                  27,28,29,30,31, 0};
+                   27,28,29,30,31, 0};
 
 
 /* P table in F function */
 
 int P_Table[32] = {15,6,19,20,28,11,27,16,
 
-                  0,14,22,25,4,17,30,9,
+                   0,14,22,25,4,17,30,9,
 
-                  1,7,23,13,31,26,2,8,
+                   1,7,23,13,31,26,2,8,
 
-                  18,12,29,5,21,10,3,24};
+                   18,12,29,5,21,10,3,24};
 
 
 /* SBox */
@@ -90,7 +90,7 @@ int S[8][4][16] =/* S1 */
 
 {15,12,8,2,4,9,1,7,5,11,3,14,10,0,6,13}},
 
-/* S2 */
+    /* S2 */
 
 {{15,1,8,14,6,11,3,4,9,7,2,13,12,0,5,10},
 
@@ -100,7 +100,7 @@ int S[8][4][16] =/* S1 */
 
 {13,8,10,1,3,15,4,2,11,6,7,12,0,5,14,9}},
 
-/* S3 */
+    /* S3 */
 
 {{10,0,9,14,6,3,15,5,1,13,12,7,11,4,2,8},
 
@@ -110,7 +110,7 @@ int S[8][4][16] =/* S1 */
 
 {1,10,13,0,6,9,8,7,4,15,14,3,11,5,2,12}},
 
-/* S4 */
+    /* S4 */
 
 {{7,13,14,3,0,6,9,10,1,2,8,5,11,12,4,15},
 
@@ -120,7 +120,7 @@ int S[8][4][16] =/* S1 */
 
 {3,15,0,6,10,1,13,8,9,4,5,11,12,7,2,14}},
 
-/* S5 */
+    /* S5 */
 
 {{2,12,4,1,7,10,11,6,8,5,3,15,13,0,14,9},
 
@@ -130,7 +130,7 @@ int S[8][4][16] =/* S1 */
 
 {11,8,12,7,1,14,2,13,6,15,0,9,10,4,5,3}},
 
-/* S6 */
+    /* S6 */
 
 {{12,1,10,15,9,2,6,8,0,13,3,4,14,7,5,11},
 
@@ -140,7 +140,7 @@ int S[8][4][16] =/* S1 */
 
 {4,3,2,12,9,5,15,10,11,14,1,7,6,0,8,13}},
 
-/* S7 */
+    /* S7 */
 
 {{4,11,2,14,15,0,8,13,3,12,9,7,5,10,6,1},
 
@@ -150,7 +150,7 @@ int S[8][4][16] =/* S1 */
 
 {6,11,13,8,1,4,10,7,9,5,0,15,14,2,3,12}},
 
-/* S8 */
+    /* S8 */
 
 {{13,2,8,4,6,15,11,1,10,9,3,14,5,0,12,7},
 
@@ -164,34 +164,34 @@ int S[8][4][16] =/* S1 */
 
 int PC_1[56] = {56,48,40,32,24,16,8,
 
-              0,57,49,41,33,25,17,
+                0,57,49,41,33,25,17,
 
-              9,1,58,50,42,34,26,
+                9,1,58,50,42,34,26,
 
-              18,10,2,59,51,43,35,
+                18,10,2,59,51,43,35,
 
-              62,54,46,38,30,22,14,
+                62,54,46,38,30,22,14,
 
-              6,61,53,45,37,29,21,
+                6,61,53,45,37,29,21,
 
-              13,5,60,52,44,36,28,
+                13,5,60,52,44,36,28,
 
-              20,12,4,27,19,11,3};
+                20,12,4,27,19,11,3};
 
 
 /* PC2 table */
 
 int PC_2[48] = {13,16,10,23,0,4,2,27,
 
-              14,5,20,9,22,18,11,3,
+                14,5,20,9,22,18,11,3,
 
-              25,7,15,6,26,19,12,1,
+                25,7,15,6,26,19,12,1,
 
-              40,51,30,36,46,54,29,39,
+                40,51,30,36,46,54,29,39,
 
-              50,44,32,46,43,48,38,55,
+                50,44,32,46,43,48,38,55,
 
-              33,52,45,41,49,35,28,31};
+                33,52,45,41,49,35,28,31};
 
 
 /* number of left rotation in sub key */
@@ -200,15 +200,15 @@ int MOVE_TIMES[16] = {1,1,2,2,2,2,2,2,1,2,2,2,2,2,2,1};
 
 int ByteToBit(ElemType ch, ElemType bit[8]){
 
-    int cnt;
+  int cnt;
 
-    for(cnt = 0;cnt < 8; cnt++){
+  for(cnt = 0;cnt < 8; cnt++){
 
-        *(bit + cnt) = (ch >> cnt) & 1;//save 8 bits into char array
+      *(bit + cnt) = (ch >> cnt) & 1;//save 8 bits into char array
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -217,15 +217,15 @@ int ByteToBit(ElemType ch, ElemType bit[8]){
 
 int BitToByte(ElemType bit[8],ElemType *ch){
 
-    int cnt;
+  int cnt;
 
-    for(cnt = 0;cnt < 8; cnt++){
+  for(cnt = 0;cnt < 8; cnt++){
 
-        *ch |= *(bit + cnt) << cnt;//bitwise OR with each bit in array
+      *ch |= *(bit + cnt) << cnt;//bitwise OR with each bit in array
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -234,15 +234,15 @@ int BitToByte(ElemType bit[8],ElemType *ch){
 
 int Char8ToBit64(ElemType ch[8],ElemType bit[64]){
 
-    int cnt;
+  int cnt;
 
-    for(cnt = 0; cnt < 8; cnt++){
+  for(cnt = 0; cnt < 8; cnt++){
 
-        ByteToBit(*(ch+cnt),bit+(cnt<<3));
+      ByteToBit(*(ch+cnt),bit+(cnt<<3));
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -251,17 +251,17 @@ int Char8ToBit64(ElemType ch[8],ElemType bit[64]){
 
 int Bit64ToChar8(ElemType bit[64],ElemType ch[8]){
 
-    int cnt;
+  int cnt;
 
-    memset(ch,0,8);//set arry to 0
+  memset(ch,0,8);//set arry to 0
 
-    for(cnt = 0; cnt < 8; cnt++){
+  for(cnt = 0; cnt < 8; cnt++){
 
-        BitToByte(bit+(cnt<<3),ch+cnt);
+      BitToByte(bit+(cnt<<3),ch+cnt);
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -270,21 +270,21 @@ int Bit64ToChar8(ElemType bit[64],ElemType ch[8]){
 
 int DES_MakeSubKeys(ElemType key[64],ElemType subKeys[16][48]){
 
-    ElemType temp[56];
+  ElemType temp[56];
 
-    int cnt;
+  int cnt;
 
-    DES_PC1_Transform(key,temp);/* PC1 */
+  DES_PC1_Transform(key,temp);/* PC1 */
 
-    for(cnt = 0; cnt < 16; cnt++){/* generate 16 sub keys */
+  for(cnt = 0; cnt < 16; cnt++){/* generate 16 sub keys */
 
-        DES_ROL(temp,MOVE_TIMES[cnt]);/* rotate left */
+      DES_ROL(temp,MOVE_TIMES[cnt]);/* rotate left */
 
-        DES_PC2_Transform(temp,subKeys[cnt]);/* PC2 */
+      DES_PC2_Transform(temp,subKeys[cnt]);/* PC2 */
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -293,15 +293,15 @@ int DES_MakeSubKeys(ElemType key[64],ElemType subKeys[16][48]){
 
 int DES_PC1_Transform(ElemType key[64], ElemType tempbts[56]){
 
-    int cnt;
+  int cnt;
 
-    for(cnt = 0; cnt < 56; cnt++){
+  for(cnt = 0; cnt < 56; cnt++){
 
-        tempbts[cnt] = key[PC_1[cnt]];
+      tempbts[cnt] = key[PC_1[cnt]];
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -310,15 +310,15 @@ int DES_PC1_Transform(ElemType key[64], ElemType tempbts[56]){
 
 int DES_PC2_Transform(ElemType key[56], ElemType tempbts[48]){
 
-    int cnt;
+  int cnt;
 
-    for(cnt = 0; cnt < 48; cnt++){
+  for(cnt = 0; cnt < 48; cnt++){
 
-        tempbts[cnt] = key[PC_2[cnt]];
+      tempbts[cnt] = key[PC_2[cnt]];
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -327,32 +327,32 @@ int DES_PC2_Transform(ElemType key[56], ElemType tempbts[48]){
 
 int DES_ROL(ElemType data[56], int time){
 
-    ElemType temp[56];
+  ElemType temp[56];
 
 
-    /* save those bits going to right to temp */
+  /* save those bits going to right to temp */
 
-    memcpy(temp,data,time);
+  memcpy(temp,data,time);
 
-    memcpy(temp+time,data+28,time);
-
-
-
-    /* rotate front 28 bits */
-
-    memcpy(data,data+time,28-time);
-
-    memcpy(data+28-time,temp,time);
+  memcpy(temp+time,data+28,time);
 
 
-    /* rotate back 28 bits */
 
-    memcpy(data+28,data+28+time,28-time);
+  /* rotate front 28 bits */
 
-    memcpy(data+56-time,temp+time,time);
+  memcpy(data,data+time,28-time);
+
+  memcpy(data+28-time,temp,time);
 
 
-    return 0;
+  /* rotate back 28 bits */
+
+  memcpy(data+28,data+28+time,28-time);
+
+  memcpy(data+56-time,temp+time,time);
+
+
+  return 0;
 
 }
 
@@ -361,19 +361,19 @@ int DES_ROL(ElemType data[56], int time){
 
 int DES_IP_Transform(ElemType data[64]){
 
-    int cnt;
+  int cnt;
 
-    ElemType temp[64];
+  ElemType temp[64];
 
-    for(cnt = 0; cnt < 64; cnt++){
+  for(cnt = 0; cnt < 64; cnt++){
 
-        temp[cnt] = data[IP_Table[cnt]];
+      temp[cnt] = data[IP_Table[cnt]];
 
     }
 
-    memcpy(data,temp,64);
+  memcpy(data,temp,64);
 
-    return 0;
+  return 0;
 
 }
 
@@ -382,19 +382,19 @@ int DES_IP_Transform(ElemType data[64]){
 
 int DES_IP_1_Transform(ElemType data[64]){
 
-    int cnt;
+  int cnt;
 
-    ElemType temp[64];
+  ElemType temp[64];
 
-    for(cnt = 0; cnt < 64; cnt++){
+  for(cnt = 0; cnt < 64; cnt++){
 
-        temp[cnt] = data[IP_1_Table[cnt]];
+      temp[cnt] = data[IP_1_Table[cnt]];
 
     }
 
-    memcpy(data,temp,64);
+  memcpy(data,temp,64);
 
-    return 0;
+  return 0;
 
 }
 
@@ -403,19 +403,19 @@ int DES_IP_1_Transform(ElemType data[64]){
 
 int DES_E_Transform(ElemType data[48]){
 
-    int cnt;
+  int cnt;
 
-    ElemType temp[48];
+  ElemType temp[48];
 
-    for(cnt = 0; cnt < 48; cnt++){
+  for(cnt = 0; cnt < 48; cnt++){
 
-        temp[cnt] = data[E_Table[cnt]];
+      temp[cnt] = data[E_Table[cnt]];
 
     }
 
-    memcpy(data,temp,48);
+  memcpy(data,temp,48);
 
-    return 0;
+  return 0;
 
 }
 
@@ -424,19 +424,19 @@ int DES_E_Transform(ElemType data[48]){
 
 int DES_P_Transform(ElemType data[32]){
 
-    int cnt;
+  int cnt;
 
-    ElemType temp[32];
+  ElemType temp[32];
 
-    for(cnt = 0; cnt < 32; cnt++){
+  for(cnt = 0; cnt < 32; cnt++){
 
-        temp[cnt] = data[P_Table[cnt]];
+      temp[cnt] = data[P_Table[cnt]];
 
     }
 
-    memcpy(data,temp,32);
+  memcpy(data,temp,32);
 
-    return 0;
+  return 0;
 
 }
 
@@ -445,61 +445,61 @@ int DES_P_Transform(ElemType data[32]){
 
 int DES_XOR(ElemType R[48], ElemType L[48], int count){
 
-    int cnt;
+  int cnt;
 
-    for(cnt = 0; cnt < count; cnt++){
+  for(cnt = 0; cnt < count; cnt++){
 
-        R[cnt] ^= L[cnt];
+      R[cnt] ^= L[cnt];
 
     }
 
-    return 0;
+  return 0;
 
 }
 
 
 /* SBox operation */
 
-int DES_SBOX(ElemType data[48]){
+int DES_SBOX(ElemType data[48], const component_selection *user_choice){
 
-    int cnt;
+  int cnt;
 
-    int row,col,output;
+  int row,col,output;
 
-    int cur1,cur2;
+  int cur1,cur2;
 
-    for(cnt = 0; cnt < 8; cnt++){
+  for(cnt = 0; cnt < 8; cnt++){
 
-        cur1 = cnt*6;//cur1 is index for every 6 bits
+      cur1 = cnt*6;//cur1 is index for every 6 bits
 
-        cur2 = cnt<<2;//cur2 is index for every 4 bits
-
-
-
-        /* compute row and col in SBox array */
-
-        row = (data[cur1]<<1) + data[cur1+5];
-
-        col = (data[cur1+1]<<3) + (data[cur1+2]<<2)
-
-            + (data[cur1+3]<<1) + data[cur1+4];
-
-        output = S[cnt][row][col];
+      cur2 = cnt<<2;//cur2 is index for every 4 bits
 
 
-        /* convert to 4 bit binary */
 
-        data[cur2] = (output & 0X08)>>3;
+      /* compute row and col in SBox array */
 
-        data[cur2+1] = (output & 0X04)>>2;
+      row = (data[cur1]<<1) + data[cur1+5];
 
-        data[cur2+2] = (output & 0X02)>>1;
+      col = (data[cur1+1]<<3) + (data[cur1+2]<<2)
 
-        data[cur2+3] = output & 0x01;
+          + (data[cur1+3]<<1) + data[cur1+4];
+
+      output = S[user_choice ->sbox[cnt]][row][col];
+
+
+      /* convert to 4 bit binary */
+
+      data[cur2] = (output & 0X08)>>3;
+
+      data[cur2+1] = (output & 0X04)>>2;
+
+      data[cur2+2] = (output & 0X02)>>1;
+
+      data[cur2+3] = output & 0x01;
 
     }
 
-    return 0;
+  return 0;
 
 }
 
@@ -508,80 +508,84 @@ int DES_SBOX(ElemType data[48]){
 
 int DES_Swap(ElemType left[32], ElemType right[32]){
 
-    ElemType temp[32];
+  ElemType temp[32];
 
-    memcpy(temp,left,32);
+  memcpy(temp,left,32);
 
-    memcpy(left,right,32);
+  memcpy(left,right,32);
 
-    memcpy(right,temp,32);
+  memcpy(right,temp,32);
 
-    return 0;
+  return 0;
 
 }
 
 
 /* encrypt single block */
 
-int DES_EncryptBlock(ElemType plainBlock[8], ElemType subKeys[16][48], ElemType cipherBlock[8]){
+int DES_EncryptBlock(ElemType plainBlock[8], ElemType subKeys[16][48], ElemType cipherBlock[8],
+const component_selection *user_choice){
 
-    ElemType plainBits[64];
+  ElemType plainBits[64];
 
-    ElemType copyRight[48];
+  ElemType copyRight[48];
 
-    int cnt;
-
-
-    Char8ToBit64(plainBlock,plainBits);
-
-    /* IP */
-
-    DES_IP_Transform(plainBits);
+  int cnt;
 
 
-    /* 16 rounds */
+  Char8ToBit64(plainBlock,plainBits);
 
-    for(cnt = 0; cnt < 16; cnt++){
+  /* IP */
+  if(user_choice -> IP){
+      DES_IP_Transform(plainBits);
+    }
 
-        memcpy(copyRight,plainBits+32,32);
 
-        /* expand right half, 32 bit to 48 bits */
+  /* get rounds of operation */
+  int rounds = user_choice ->num_of_rounds;
+  for(cnt = 0; cnt < rounds; cnt++){
 
-        DES_E_Transform(copyRight);
+      memcpy(copyRight,plainBits+32,32);
 
-        /* XOR expanded right half with sub key */
+      /* expand right half, 32 bit to 48 bits */
 
-        DES_XOR(copyRight,subKeys[cnt],48);
+      DES_E_Transform(copyRight);
 
-        /* go through SBox */
+      /* XOR expanded right half with sub key */
 
-        DES_SBOX(copyRight);
+      DES_XOR(copyRight,subKeys[cnt],48);
 
-        /* Permutation */
+      /* go through SBox */
 
-        DES_P_Transform(copyRight);
+      DES_SBOX(copyRight, user_choice);
 
-        /* XOR left half with result from F function */
+      /* Permutation */
+      if(user_choice ->permutation_internal){
+          DES_P_Transform(copyRight);
+        }
 
-        DES_XOR(plainBits,copyRight,32);
+      /* XOR left half with result from F function */
 
-        if(cnt != 15){
+      DES_XOR(plainBits,copyRight,32);
 
-            /* swap left and right half */
+      if(cnt != (rounds - 1)){
 
-            DES_Swap(plainBits,plainBits+32);
-
+          /* swap left and right half */
+          if(user_choice ->feistel_swap){
+              DES_Swap(plainBits,plainBits+32);
+            }
         }
 
     }
 
-    /* inverse permutation */
+  /* inverse permutation */
+  if(user_choice ->inverse_permutation){
+      DES_IP_1_Transform(plainBits);
+    }
 
-    DES_IP_1_Transform(plainBits);
+  Bit64ToChar8(plainBits,cipherBlock);
 
-    Bit64ToChar8(plainBits,cipherBlock);
-
-    return 0;
+  return 0;
 
 }
 
@@ -589,231 +593,236 @@ int DES_EncryptBlock(ElemType plainBlock[8], ElemType subKeys[16][48], ElemType 
 /* decrypt single block */
 
 int DES_DecryptBlock(ElemType cipherBlock[8], ElemType subKeys[16][48],
-                      ElemType plainBlock[8]){
+ElemType plainBlock[8], const component_selection *user_choice){
 
-    ElemType cipherBits[64];
+  ElemType cipherBits[64];
 
-    ElemType copyRight[48];
+  ElemType copyRight[48];
 
-    int cnt;
-
-
-    Char8ToBit64(cipherBlock,cipherBits);
-
-    /* IP */
-
-    DES_IP_Transform(cipherBits);
+  int cnt;
 
 
+  Char8ToBit64(cipherBlock,cipherBits);
 
-    /* 16 rounds */
+  /* IP */
+  if(user_choice ->inverse_permutation){
+      DES_IP_Transform(cipherBits);
+    }
 
-    for(cnt = 15; cnt >= 0; cnt--){
 
-        memcpy(copyRight,cipherBits+32,32);
+  /* 16 rounds */
+  int rounds = user_choice ->num_of_rounds;
+  for(cnt = (rounds - 1); cnt >= 0; cnt--){
 
-        /* expansion */
+      memcpy(copyRight,cipherBits+32,32);
 
-        DES_E_Transform(copyRight);
+      /* expansion */
 
-        /* XOR with sub key */
+      DES_E_Transform(copyRight);
 
-        DES_XOR(copyRight,subKeys[cnt],48);
+      /* XOR with sub key */
 
-        /* go through SBox */
+      DES_XOR(copyRight,subKeys[cnt],48);
 
-        DES_SBOX(copyRight);
+      /* go through SBox */
 
-        /* Permutation */
+      DES_SBOX(copyRight, user_choice);
 
-        DES_P_Transform(copyRight);
+      /* Permutation */
+      if(user_choice ->permutation_internal){
+          DES_P_Transform(copyRight);
+        }
 
-        /* XOR with left half */
+      /* XOR with left half */
 
-        DES_XOR(cipherBits,copyRight,32);
+      DES_XOR(cipherBits,copyRight,32);
 
-        if(cnt != 0){
+      if(cnt != 0){
 
-            /* swap left and right */
-
-            DES_Swap(cipherBits,cipherBits+32);
+          /* swap left and right */
+          if(user_choice ->feistel_swap){
+              DES_Swap(cipherBits,cipherBits+32);
+            }
 
         }
 
     }
 
-    /* inverse permutation */
+  /* inverse permutation */
+  if(user_choice ->IP){
+      DES_IP_1_Transform(cipherBits);
+    }
 
-    DES_IP_1_Transform(cipherBits);
+  Bit64ToChar8(cipherBits,plainBlock);
 
-    Bit64ToChar8(cipherBits,plainBlock);
-
-    return 0;
+  return 0;
 
 }
 
 
 
-int DES_Encrypt(const char *plainFile, const char *keyStr, const char *cipherFile){
+int DES_Encrypt(const char *plainFile, const char *keyStr, const char *cipherFile,
+                const component_selection *user_choice){
 
-    FILE *plain,*cipher;
+  FILE *plain,*cipher;
 
-    int count;
+  int count;
 
-    ElemType plainBlock[8],cipherBlock[8],keyBlock[8];
+  ElemType plainBlock[8],cipherBlock[8],keyBlock[8];
 
-    ElemType bKey[64];
+  ElemType bKey[64];
 
-    ElemType subKeys[16][48];
+  ElemType subKeys[16][48];
 
-    if((plain = fopen(plainFile,"rb")) == NULL){
-        return PLAIN_FILE_OPEN_ERROR;
-
-    }
-
-    if((cipher = fopen(cipherFile,"wb")) == NULL){
-
-        return CIPHER_FILE_OPEN_ERROR;
+  if((plain = fopen(plainFile,"rb")) == NULL){
+      return PLAIN_FILE_OPEN_ERROR;
 
     }
 
-    /* get keyBlock */
+  if((cipher = fopen(cipherFile,"wb")) == NULL){
 
-    memcpy(keyBlock,keyStr,8);
+      return CIPHER_FILE_OPEN_ERROR;
 
-    /* convert to binary bits */
+    }
 
-    Char8ToBit64(keyBlock,bKey);
+  /* get keyBlock */
 
-    /* generate sub key */
+  memcpy(keyBlock,keyStr,8);
 
-    DES_MakeSubKeys(bKey,subKeys);
+  /* convert to binary bits */
+
+  Char8ToBit64(keyBlock,bKey);
+
+  /* generate sub key */
+
+  DES_MakeSubKeys(bKey,subKeys);
 
 
 
-    while(!feof(plain)){
+  while(!feof(plain)){
 
-        /* read 8 bytes from plaintext */
+      /* read 8 bytes from plaintext */
 
-        if((count = fread(plainBlock,sizeof(char),8,plain)) == 8){
+      if((count = fread(plainBlock,sizeof(char),8,plain)) == 8){
 
-            DES_EncryptBlock(plainBlock,subKeys,cipherBlock);
+          DES_EncryptBlock(plainBlock,subKeys,cipherBlock, user_choice);
 
-            fwrite(cipherBlock,sizeof(char),8,cipher);
+          fwrite(cipherBlock,sizeof(char),8,cipher);
 
         }
 
     }
 
-    if(count){
+  if(count){
 
-        /* ANSI X.923 padding */
+      /* ANSI X.923 padding */
 
-        memset(plainBlock + count,'\0',7 - count);
+      memset(plainBlock + count,'\0',7 - count);
 
-        /* last byte is the number of bytes padded */
+      /* last byte is the number of bytes padded */
 
-        plainBlock[7] = 8 - count;
+      plainBlock[7] = 8 - count;
 
-        DES_EncryptBlock(plainBlock,subKeys,cipherBlock);
+      DES_EncryptBlock(plainBlock,subKeys,cipherBlock, user_choice);
 
-        fwrite(cipherBlock,sizeof(char),8,cipher);
+      fwrite(cipherBlock,sizeof(char),8,cipher);
 
     }
 
-    fclose(plain);
+  fclose(plain);
 
-    fclose(cipher);
+  fclose(cipher);
 
-return OK;
+  return OK;
 
 }
 
 
 
 
-int DES_Decrypt(const char *cipherFile, const char *keyStr, const char *plainFile){
+int DES_Decrypt(const char *cipherFile, const char *keyStr, const char *plainFile,
+                const component_selection *user_choice){
 
-    FILE *plain, *cipher;
+  FILE *plain, *cipher;
 
-    int count = 0;
+  int count = 0;
 
-    long fileLen;
-    long times = 0;
+  long fileLen;
+  long times = 0;
 
-    ElemType plainBlock[8],cipherBlock[8],keyBlock[8];
+  ElemType plainBlock[8],cipherBlock[8],keyBlock[8];
 
-    ElemType bKey[64];
+  ElemType bKey[64];
 
-    ElemType subKeys[16][48];
+  ElemType subKeys[16][48];
 
-    if((cipher = fopen(cipherFile,"rb")) == NULL){
+  if((cipher = fopen(cipherFile,"rb")) == NULL){
 
-        return CIPHER_FILE_OPEN_ERROR;
-
-    }
-
-    if((plain = fopen(plainFile,"wb")) == NULL){
-
-        return PLAIN_FILE_OPEN_ERROR;
+      return CIPHER_FILE_OPEN_ERROR;
 
     }
 
+  if((plain = fopen(plainFile,"wb")) == NULL){
 
-    /* copy key string */
+      return PLAIN_FILE_OPEN_ERROR;
 
-    memcpy(keyBlock,keyStr,8);
-
-    /* convert to 64 bit char array */
-
-    Char8ToBit64(keyBlock,bKey);
-
-    /* generate sub key */
-
-    DES_MakeSubKeys(bKey,subKeys);
+    }
 
 
-    /* get file length     */
+  /* copy key string */
 
-    fseek(cipher,0,SEEK_END);    /* change pointer to end */
+  memcpy(keyBlock,keyStr,8);
 
-    fileLen = ftell(cipher);
+  /* convert to 64 bit char array */
 
-    rewind(cipher);                /* set pointer to the beginning */
+  Char8ToBit64(keyBlock,bKey);
 
-    while(1){
+  /* generate sub key */
+
+  DES_MakeSubKeys(bKey,subKeys);
+
+
+  /* get file length     */
+
+  fseek(cipher,0,SEEK_END);    /* change pointer to end */
+
+  fileLen = ftell(cipher);
+
+  rewind(cipher);                /* set pointer to the beginning */
+
+  while(1){
 
 
 
-        fread(cipherBlock,sizeof(char),8,cipher);
+      fread(cipherBlock,sizeof(char),8,cipher);
 
-        DES_DecryptBlock(cipherBlock,subKeys,plainBlock);
+      DES_DecryptBlock(cipherBlock,subKeys,plainBlock, user_choice);
 
-        times += 8;
+      times += 8;
 
-        if(times < fileLen){
+      if(times < fileLen){
 
-            fwrite(plainBlock,sizeof(char),8,plain);
+          fwrite(plainBlock,sizeof(char),8,plain);
 
         }
 
-        else{
+      else{
 
-            break;
+          break;
 
         }
 
     }
 
-    /* check whether padding exists */
+  /* check whether padding exists */
 
-    if(plainBlock[7] < 8){
+  if(plainBlock[7] < 8){
 
-        for(count = 8 - plainBlock[7]; count < 7; count++){
+      for(count = 8 - plainBlock[7]; count < 7; count++){
 
-            if(plainBlock[count] != '\0'){
+          if(plainBlock[count] != '\0'){
 
-                break;
+              break;
 
             }
 
@@ -821,23 +830,23 @@ int DES_Decrypt(const char *cipherFile, const char *keyStr, const char *plainFil
 
     }
 
-    if(count == 7){/* padding exists */
+  if(count == 7){/* padding exists */
 
-        fwrite(plainBlock,sizeof(char),8 - plainBlock[7],plain);
-
-    }
-
-    else{/* no padding */
-
-        fwrite(plainBlock,sizeof(char),8,plain);
+      fwrite(plainBlock,sizeof(char),8 - plainBlock[7],plain);
 
     }
 
+  else{/* no padding */
 
-    fclose(plain);
+      fwrite(plainBlock,sizeof(char),8,plain);
 
-    fclose(cipher);
+    }
 
-return OK;
+
+  fclose(plain);
+
+  fclose(cipher);
+
+  return OK;
 
 }

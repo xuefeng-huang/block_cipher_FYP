@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QWizard>
+#include "DES.h"
 
 
 
@@ -12,6 +13,9 @@ class MainWindow : public QWizard
 public:
   explicit MainWindow(QWidget *parent = 0);
   void accept();
+
+private:
+  void get_selection(component_selection* user_choice);
 
 };
 
