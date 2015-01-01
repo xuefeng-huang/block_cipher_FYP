@@ -16,6 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
   addPage(new FFunction);
   addPage(new SaveFile);
 
+  //set up "start over" button to go back to Intro page
+  setButtonText(QWizard::CustomButton1, "Start over");
+  setOption(QWizard::HaveCustomButton1, true);
+  connect(this, SIGNAL(customButtonClicked(int)), this, SLOT(restart()));
+
   setButtonText(QWizard::CancelButton, "Close");
   setButtonText(QWizard::FinishButton, "Encrypt");
   setWindowTitle("Blockcipher playground");
@@ -62,6 +67,9 @@ void MainWindow::get_selection(component_selection* user_choice){
     }
 }
 
+/*
+ * this function is called when Encrypt button is clicked
+ * */
 void MainWindow::accept(){
   component_selection user_choice;
 

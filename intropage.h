@@ -17,6 +17,9 @@ public:
 
 private slots:
   void on_file_button_clicked();
+  void save_cipher_file();
+  void save_decrypt_file();
+  void decrypt();
 
 private:
   Ui::IntroPage* ui;
