@@ -16,6 +16,7 @@ public:
 
 private:
   void get_selection(component_selection* user_choice);
+  void save_binary(component_selection& user_choice);
 
 };
 

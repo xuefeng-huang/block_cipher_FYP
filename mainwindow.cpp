@@ -6,6 +6,8 @@
 #include "DES.h"
 #include <QtGui>
 #include <QMessageBox>
+#include <fstream>
+#include <string.h>
 //#include <QString>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -56,6 +58,9 @@ void MainWindow::get_selection(component_selection* user_choice){
       user_choice ->inverse_permutation = false;
     }
 
+  //copy 8 bytes to password array
+  memcpy(user_choice ->password, field("password").toString().toStdString().c_str(), 8);
+
   //set number of rounds
   user_choice ->num_of_rounds = field("num_rounds").toInt();
 
@@ -75,14 +80,12 @@ void MainWindow::accept(){
 
   QString input_file = field("input_file_path").toString();
   QString output_file = field("save_file_path").toString();
-  QString password = field("password").toString();
   std::string input_file_str = input_file.toStdString();
   std::string output_file_str = output_file.toStdString();
-  std::string password_str = password.toStdString();
 
   get_selection(&user_choice);
 
-  int ret = DES_Encrypt(input_file_str.c_str(), password_str.c_str(),
+  int ret = DES_Encrypt(input_file_str.c_str(), user_choice.password,
               output_file_str.c_str(), &user_choice);
 
   if(ret == 1){//OK
@@ -124,6 +127,8 @@ void MainWindow::accept(){
   else
     out << "Inverse permutation: false\n";
 
+  out << "Password: " << field("password").toString() << "\n";
+
   out << "rounds of operation: " << user_choice.num_of_rounds << "\n";
   out << "selection of 8 Sboxes:\n";
 
@@ -159,6 +164,18 @@ void MainWindow::accept(){
     }
 
   setting_file.close();
+
+  //save a binary copy of user setting
+  save_binary(user_choice);
+}
+
+void MainWindow::save_binary(component_selection& user_choice){
+  QString output_file = field("save_file_path").toString();
+  std::string file_name = (output_file + "_setting.dat").toStdString();
+  std::ofstream out_binary(file_name.c_str(), std::ofstream::binary);
+
+  out_binary.write(reinterpret_cast<const char*>(&user_choice), sizeof(user_choice));
+  out_binary.close();
 }
 
 

@@ -3,6 +3,7 @@
 #include "DES.h"
 #include <QFileDialog>
 #include <QMessageBox>
+#include <fstream>
 
 IntroPage::IntroPage(QWidget *parent)
   : QWizardPage(parent), ui(new Ui::IntroPage)
@@ -61,12 +62,23 @@ void IntroPage::decrypt(){
 
   QString input_file = ui ->cipher_file_path->text();
   QString output_file = ui ->decrypt_file_path ->text();
-  QString password = field("password").toString();
   std::string input_file_str = input_file.toStdString();
   std::string output_file_str = output_file.toStdString();
-  std::string password_str = password.toStdString();
 
-  int ret = DES_Decrypt(input_file_str.c_str(), password_str.c_str(),
+  //open binary setting file
+  std::string file_name = (input_file + "_setting.dat").toStdString();
+  std::ifstream infile(file_name.c_str(), std::ifstream::binary);
+  if(infile.is_open()){
+      infile.read(reinterpret_cast<char*>(&user_choice), sizeof(user_choice));
+      infile.close();
+    }
+  else{
+      QMessageBox::critical(this, "error", "cannot read binary setting file!");
+      return;
+    }
+
+
+  int ret = DES_Decrypt(input_file_str.c_str(), user_choice.password,
                         output_file_str.c_str(), &user_choice);
 
   if(ret == 1){//OK

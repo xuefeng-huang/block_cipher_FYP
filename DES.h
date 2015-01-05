@@ -9,6 +9,7 @@ struct component_selection {
   bool feistel_swap;
   bool permutation_internal;
   bool inverse_permutation;
+  char password[8];
   int num_of_rounds;
   int sbox[8];
 };
