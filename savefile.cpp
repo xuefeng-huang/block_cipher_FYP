@@ -9,9 +9,9 @@ SaveFile::SaveFile(QWidget *parent) :
 {
   ui->setupUi(this);
 
-  ui -> title -> setText("<h1>4. Encrypt and decrypt file</h1>");
+  ui -> title -> setText("<h1>4. Encryption</h1>");
   ui -> description -> setText("Choose a location to save your file:<br />"
-                               "Note: Setting files will be saved with the cipher "
+                               "Note: file settings will be saved with the cipher "
                                "text, it is recommended to save them into "
                                "a <b>new folder</b><br><br>");
   ui -> description -> setWordWrap(true);

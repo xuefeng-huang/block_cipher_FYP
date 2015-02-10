@@ -50,6 +50,9 @@
        </item>
        <item>
         <widget class="QCheckBox" name="check_IP">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rearrange on the 64 bits into a specific order&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Initial Permutation</string>
          </property>
@@ -58,7 +61,7 @@
        <item>
         <widget class="QCheckBox" name="check_swap">
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;check to enable Feistel network construction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Swapping L with R&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
           <string>Feistel swap</string>
@@ -68,15 +71,18 @@
        <item>
         <widget class="QCheckBox" name="check_permutarion">
          <property name="toolTip">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;check to enable Permutation after every substitution&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rearrange the 32 bits output from the Sbox to a specific order&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
          </property>
          <property name="text">
-          <string>Permutation after substitutiion</string>
+          <string>Permutation in Feistel function</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QCheckBox" name="check_inverse_IP">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rearrage  the 64 bits into the inverse of the initial permutation&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Inverse Permutation</string>
          </property>

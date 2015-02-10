@@ -111,7 +111,7 @@
          <item>
           <widget class="QPushButton" name="choose_decrypt">
            <property name="text">
-            <string>Choose plain text</string>
+            <string>Save as</string>
            </property>
           </widget>
          </item>

@@ -54,7 +54,7 @@
      <item>
       <widget class="QPushButton" name="choose_button">
        <property name="text">
-        <string>Choose cipher text</string>
+        <string>Save as</string>
        </property>
       </widget>
      </item>
