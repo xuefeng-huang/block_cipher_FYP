@@ -22,10 +22,16 @@ MainWindow::MainWindow(QWidget *parent) :
   setButtonText(QWizard::CustomButton1, "Start over");
   setOption(QWizard::HaveCustomButton1, true);
   connect(this, SIGNAL(customButtonClicked(int)), this, SLOT(restart()));
+  connect(this, SIGNAL(customButtonClicked(int)), this, SLOT(reset_decrypt_fields()));
 
   setButtonText(QWizard::CancelButton, "Close");
   setButtonText(QWizard::FinishButton, "Encrypt");
   setWindowTitle("Blockcipher playground");
+}
+
+void MainWindow::reset_decrypt_fields(){
+  field("cipher_file_path").clear();
+  field("decrypt_file_path").clear();
 }
 
 void MainWindow::get_selection(component_selection* user_choice){
@@ -162,6 +168,22 @@ void MainWindow::accept(){
 
         }
     }
+
+  //output explanation of the selection
+  if(!user_choice.IP || !user_choice.inverse_permutation){
+      out << "Initial and inverse permutation table consists of no cryptographic properties.\n"
+             "They were implemented in DES to facilitate 8-bit hardware architecture in the past\n"
+             "however with nowadays technology advancement, it seems quite redundant.\n\n";
+    }
+  if(!user_choice.feistel_swap){
+      out << "The Feistel swap rotates the left and right column of 32bits split from the original block of 64 bits.\n"
+             "By removing the Feistel swap, the entire right column of 32bits remains unchanged regardless of the number of rounds chosen.\n\n";
+    }
+  if(!user_choice.permutation_internal){
+      out << "P-box provides diffusion, one of the main criteria for a modern cipher.\n"
+             "By removing the permutation after going through the S-boxes removes the diffusion property\n\n";
+    }
+
 
   setting_file.close();
 

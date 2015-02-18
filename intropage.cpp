@@ -23,6 +23,8 @@ IntroPage::IntroPage(QWidget *parent)
   connect(ui ->decrypt_button, SIGNAL(clicked()), this, SLOT(decrypt()));
 
   registerField("input_file_path*", ui -> file_path);
+  registerField("cipher_file_path", ui ->cipher_file_path);
+  registerField("decrypt_file_path", ui ->decrypt_file_path);
 
 }
 
